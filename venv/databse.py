@@ -7,11 +7,14 @@ database='bank'
 )
 
 mycursor=mydb.cursor()
-#mycursor.execute("show tables")
-data="insert into customer(name,balance) values(%s,%s)"
-name=("salman","10")
-mycursor.execute(data,name)
-mycursor.comit()
-for x in mycursor:
+#sq="delete from customer"
+#mycursor.execute("alter table customer add column id int auto_increment PRIMARY KEY")
+#mycursor.execute(sq)
+
+mycursor.execute("select * from customer")
+result=mycursor.fetchall()
+print("hellllllllo")
+for x in result:
+    print("hello")
     print(x)
 

@@ -41,7 +41,7 @@ class bank:
         mycursor.execute ("SELECT balance FROM Customer where name=%s",(deposit_name,))
         current_balance = mycursor.fetchall()
         print(deposit_name," your current balance:",current_balance[0][0])
-       
+
     def withdraw(self,deposit_name):
         withdraw_amount = int(input("enter the amount you want to withdraw"))
         mycursor.execute("SELECT balance FROM Customer where name=%s", (deposit_name,))
@@ -69,12 +69,12 @@ customer = bank()
 customer.customer(deposit_name)
 customer.deposit(deposit_name)
 
-choice=input("did you want to withdraw from your account? y/n")
+choice=input("did you want to withdraw from your account? y/n \n")
 if choice=='y' or choice== 'Y':
     customer.withdraw(deposit_name)
 elif choice=='n' or choice=='N':
-    print("thannk you")
+    print("thank you")
 
 else:
     print("wrong choice")
-
+    print("please try again later")
