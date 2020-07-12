@@ -4,7 +4,6 @@
     <list default="true" id="60122d22-f750-4477-8e08-8ec648451989" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/databse.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/databse.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,29 +91,45 @@
       <option name="presentableId" value="Default" />
       <updated>1594478280162</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;all are ok&quot;">
+      <created>1594555571764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594555571765</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;all are ok&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;all are ok&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594546523380">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594546523380" />
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1594555517276">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1594555569804">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594555517276" />
-    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1594555517276">
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1594555569804" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1594562454349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594555517276" />
-    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1594555517276">
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594562454349" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1594562454349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594555517276" />
-    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1594555517276">
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594562454349" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1594562454349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594555517276" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594562454349" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1594562454349">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594562454349" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1594480003328">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

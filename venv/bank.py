@@ -7,10 +7,10 @@ database='bank'
 )
 
 mycursor=mydb.cursor()
-#mycursor.execute("alter table customer add column id int auto_increment PRIMARY KEY")
-mycursor.execute("show tables")
-for x in mycursor:
-    print(x)
+#mycursor.execute("create databse bank") #creating database bank
+#mycursor=mydb.cursor()
+#mycursor.execute("create table customers (name varchar(50), balance varchar(50),id int auto_increment primary key)")
+#creating table which contain customer name ,balance and id
 
 
 class bank:
@@ -56,7 +56,7 @@ class bank:
             remainig_balance = mycursor.fetchall()
             amount = remainig_balance[0][0]
             print("remaining balance in your account:", remainig_balance[0][0])
-            print("thannk you")
+            print("thank you")
         else:
             print("you don't have enough money")
             print("thank you")
