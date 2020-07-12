@@ -61,10 +61,9 @@ class bank:
             print("you don't have enough money")
             print("thank you")
 
-    def balanc(self):
-        print("current amount in your account is:", self.balance)
 
-deposit_name = str(input("enter your name"))
+
+deposit_name = input("enter your name")
 customer = bank()
 customer.customer(deposit_name)
 customer.deposit(deposit_name)
@@ -76,5 +75,4 @@ elif choice=='n' or choice=='N':
     print("thank you")
 
 else:
-    print("wrong choice")
-    print("please try again later")
+    print("wrong choice,please try again later")
