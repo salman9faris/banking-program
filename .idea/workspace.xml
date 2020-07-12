@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60122d22-f750-4477-8e08-8ec648451989" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/venv/bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/databse.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
