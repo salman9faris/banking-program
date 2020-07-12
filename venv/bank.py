@@ -18,40 +18,48 @@ class bank:
         self.balance = 0
 
     def customer(self,deposit_name):
+        mycursor.execute("select name from customer where name=%s",(deposit_name,))
+        name=mycursor.fetchall()
+        if len(name)==0: #checking the customer already exist or not
+            print("you are a new customer")
+            mycursor.execute("insert into customer (name,balance) values(%s,%s)",(deposit_name,self.balance))
+            mydb.commit()
+        else:
+            pass
 
-        mycursor = mydb.cursor()
-        result = "insert into customer (name,balance) values(%s,%s)"
-        data = (deposit_name, 0)
-        mycursor.execute(result, data)
-        mydb.commit()
     def deposit(self,deposit_name):
+
         print("hello ",deposit_name)
-        deposit = int(input("enter the amount u want to deposite"))
+        deposit = int(input("enter the amount you want to deposite"))
         mycursor = mydb.cursor()
         mycursor.execute("SELECT balance FROM Customer where name=%s", (deposit_name,))
-        #mycursor.execute(data, (deposit_name,))
         bal = mycursor.fetchall()
-        amount=bal[0][0]+deposit
-        print(amount)
+        amount=bal[0][0]+deposit #adding already existing amount of database with current deposited amount
         mycursor = mydb.cursor()
-        result = "insert into customer (name,balance) values(%s,%s)"
-        data = (deposit_name, amount)
-        mycursor.execute(result, data)
+        mycursor.execute("update Customer set balance=%s  where name=%s", (amount,deposit_name))
         mydb.commit()
-        mycursor.execute ("SELECT * FROM Customer where name=%s",(deposit_name,))
-        #mycursor.execute(data, (deposit_name,))
-        #mycursor.execute("select * from customer")
-        details= mycursor.fetchall()
-        for bal in details:
-            print(bal)
-
-    def withdraw(self):
-        withdraw = int(input("enter the amount u want to withdraw"))
-        if self.balance >= withdraw:
-            self.balance -= withdraw
-            print("you withdrawed the amound of :", withdraw)
+        mycursor.execute ("SELECT balance FROM Customer where name=%s",(deposit_name,))
+        current_balance = mycursor.fetchall()
+        print(deposit_name," your current balance:",current_balance[0][0])
+       
+    def withdraw(self,deposit_name):
+        withdraw_amount = int(input("enter the amount you want to withdraw"))
+        mycursor.execute("SELECT balance FROM Customer where name=%s", (deposit_name,))
+        bal = mycursor.fetchall()
+        amount = bal[0][0]
+        if amount >= withdraw_amount:
+            amount-=withdraw_amount
+            mycursor.execute("update Customer set balance=%s  where name=%s", (amount, deposit_name))
+            mydb.commit()
+            print("you withdrawed the amound of :", withdraw_amount)
+            mycursor.execute("SELECT balance FROM Customer where name=%s", (deposit_name,))
+            remainig_balance = mycursor.fetchall()
+            amount = remainig_balance[0][0]
+            print("remaining balance in your account:", remainig_balance[0][0])
+            print("thannk you")
         else:
-            print("you dnt have enough money")
+            print("you don't have enough money")
+            print("thank you")
 
     def balanc(self):
         print("current amount in your account is:", self.balance)
@@ -60,3 +68,13 @@ deposit_name = str(input("enter your name"))
 customer = bank()
 customer.customer(deposit_name)
 customer.deposit(deposit_name)
+
+choice=input("did you want to withdraw from your account? y/n")
+if choice=='y' or choice== 'Y':
+    customer.withdraw(deposit_name)
+elif choice=='n' or choice=='N':
+    print("thannk you")
+
+else:
+    print("wrong choice")
+
